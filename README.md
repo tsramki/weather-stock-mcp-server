@@ -62,13 +62,6 @@ curl -i http://127.0.0.1:8000/mcp \
   -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"test","version":"1"}}}'
 ```
 
-### Connecting from Claude Code
-
-```bash
-claude mcp add --transport http stock-weather http://127.0.0.1:8000/mcp \
-  --header "Authorization: Bearer <MCP_SERVER_TOKEN>"
-```
-
 ## Notes
 
 - Traffic is plain HTTP, so the token is sent unencrypted. This is fine on localhost; put the server behind TLS before exposing it.
